@@ -1,0 +1,241 @@
+* {
+  font-family: "Open Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header {
+  -webkit-box-shadow: 0 1px 5px black;
+          box-shadow: 0 1px 5px black;
+  background-image: url(../img/yellow_top_wave_01.png);
+  background-color: transparent;
+}
+
+.header .header_container {
+  width: 90%;
+  margin: auto;
+}
+
+.header .button_purple {
+  background-color: #b61984;
+  color: white;
+  border-radius: 200px;
+}
+
+.header i {
+  margin: 0.5rem;
+}
+
+.cursive {
+  color: #b61984;
+}
+
+.about-us .about-us_container {
+  width: 90%;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (max-width: 768px) {
+  .about-us .about-us_container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.about-us .about-us_title {
+  margin: auto;
+}
+
+.about-us .big {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .about-us .big {
+    font-size: 2rem;
+  }
+}
+
+.person {
+  background-image: url("../img/Violet_top_left_wave.png");
+}
+
+.person .person_container {
+  width: 90%;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+@media screen and (max-width: 900px) {
+  .person .person_container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .person .person_container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .person .person_container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.person .person_each {
+  text-align: center;
+  background-color: white;
+  margin: 0.5rem;
+}
+
+.person .person_each h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.person .person_each img {
+  width: 100%;
+}
+
+.person .person_each img:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+@media screen and (max-width: 768px) {
+  .person .person_each img:hover {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.find-course .find-course_container {
+  width: 75%;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (max-width: 900px) {
+  .find-course .find-course_container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.find-course .find-course_container h1 {
+  margin: 2rem;
+}
+
+.find-course .find-course_container .find-course_form {
+  width: 90%;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.find-course .find-course_container input {
+  width: 100%;
+  margin: 2rem;
+}
+
+.find-course .find-course_container select {
+  margin: 2rem;
+  height: 1.5rem;
+  width: 100%;
+  display: inline;
+}
+
+.find-course .find-course_container textarea {
+  margin: 2rem;
+  width: 100%;
+}
+
+.find-course .find-course_container button {
+  background-color: #b61984;
+  color: white;
+  width: 100%;
+  margin: 2rem;
+}
+
+.footer {
+  background-image: url(../img/accent_bottom_wave_01.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.footer .footer_container {
+  width: 90%;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+.footer .footer_container h1 {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 900px) {
+  .footer .footer_container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .footer .footer_container h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer .footer_container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .footer .footer_container h1 {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footer .footer_container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .footer .footer_container h1 {
+    font-size: 1rem;
+  }
+}
+/*# sourceMappingURL=index.css.map */

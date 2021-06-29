@@ -1,0 +1,168 @@
+$c-purple: #b61984;
+$f-large: 2rem;
+$m-large: 2rem;
+$big-screen: 900px;
+$medium-screen: 768px;
+$small-screen: 576px;
+
+@mixin standard_align($marg: 90%) {
+    width: $marg;
+    margin: auto;
+}
+
+@mixin grid_by_frame($grid_size) {
+    display: grid;
+    grid-template-columns: repeat($grid_size,1fr);
+} 
+
+
+* {
+    font-family:"Open Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.header{
+    box-shadow: 0 1px 5px black;
+    background-image: url(../img/yellow_top_wave_01.png);
+    background-color: transparent;
+    .header_container{
+        @include standard_align();
+    }
+    .button_purple {
+        background-color: $c-purple;
+        color: white;
+        border-radius: 200px;
+    }
+    i {
+        margin: 0.5rem;
+    }
+}
+.cursive {
+    color: $c-purple;
+}
+
+.about-us{
+    .about-us_container{
+        @include standard_align();
+        @include grid_by_frame(2);
+        @media screen and (max-width: $medium-screen) {
+            @include grid_by_frame(1);
+        }
+    }
+    .about-us_title {
+        margin: auto;
+    }
+    .big{
+        font-size: 3rem;
+        @media screen and (max-width: $medium-screen) {
+            font-size: 2rem;
+        }
+        font-weight: bold;
+    }
+}
+
+.person {
+    background-image: url('../img/Violet_top_left_wave.png');
+    .person_container{
+        @include standard_align();
+        @include grid_by_frame(4);
+        @media screen and (max-width: $big-screen) {
+            @include grid_by_frame(3);
+        }
+        @media screen and (max-width: $medium-screen) {
+            @include grid_by_frame(2);
+        }
+        @media screen and (max-width: $small-screen) {
+            @include grid_by_frame(1);
+        }
+    }
+    .person_each {
+        text-align: center;
+        background-color: white;
+        margin: 0.5rem;
+        h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        img {
+            width: 100%;
+        }
+        img:hover {
+            transform: scale(1.5);
+            @media screen and (max-width: $medium-screen) {
+                transform: scale(1);
+            }
+        }
+    }
+}
+
+.find-course {
+    .find-course_container{
+        @include standard_align(75%);
+        @include grid_by_frame(2);
+        @media screen and (max-width: $big-screen) {
+            @include grid_by_frame(1);
+        }
+        h1 {
+            margin: $m-large;
+        }
+        .find-course_form {
+            @include standard_align();
+            background-color: rgba(255, 255, 255, 0.25);
+        }   
+        input { 
+            width: 100%;
+            margin: $m-large;
+        }
+        select {
+            margin: $m-large;
+            height: 1.5rem;
+            width: 100%;
+            display: inline;
+        }     
+        textarea {
+            margin: $m-large;
+            width: 100%;
+        }
+        button {
+            background-color: $c-purple;
+            color: white;
+            width: 100%;
+            margin: $m-large;
+        }
+    }
+}
+
+.footer {
+    background-image: url(../img/accent_bottom_wave_01.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    .footer_container {
+        @include standard_align();
+        @include grid_by_frame(4);
+        h1 {
+            font-weight: bold;
+        }
+        @media screen and (max-width: $big-screen) {
+            @include grid_by_frame(3);
+            h1 {
+            font-size: 1.5rem;
+            }
+        }
+        @media screen and (max-width: $medium-screen) {
+            @include grid_by_frame(2);
+            h1 {
+            font-size: 1.25rem;
+            }
+        }
+        @media screen and (max-width: $small-screen) {
+            @include grid_by_frame(1);
+            h1 {
+                font-size: 1rem;
+            }
+        }
+    }
+}
